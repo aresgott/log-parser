@@ -6,4 +6,5 @@ export interface ILogParser {
   singleLog(lineLog: string, level: string): OutputLog;
   parse(reader: IReader, writer: IWriter): void;
   logWriter(writer: IWriter, logs: Array<OutputLog>): void;
+  batchLog(input: Array<string>): Array<OutputLog>;
 }

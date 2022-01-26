@@ -31,6 +31,7 @@ export class LogParser implements ILogParser {
     });
     return allLogs;
   }
+
   logWriter(writer: IWriter, logs: Array<OutputLog>): void {
     writer.writer(logs);
   }

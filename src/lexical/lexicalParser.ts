@@ -29,7 +29,7 @@ export class LexicalParser {
         );
       }
     } catch (error) {
-      console.log(error); //we can log it to file for errors
+      throw new Error(error);
     }
   }
 
