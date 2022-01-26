@@ -2,7 +2,7 @@ import { OutputLog } from "../interfaces/outputLog.interface";
 import LogLevel from "../types/logLevel";
 
 export class LexicalParser {
-  parser(log: string): OutputLog {
+  parse(log: string): OutputLog {
     try {
       const logSplit = log.split(" - ");
       const [timeOccure, logLevel, logDetail] = logSplit;
