@@ -1,4 +1,4 @@
 export interface IWriter {
-    writer(outputFileName: string, line: Array<object>);
+    writer(line: Array<object>);
   }
   

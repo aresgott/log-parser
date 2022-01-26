@@ -1,6 +1,9 @@
 import { OutputLog } from "./outputLog.interface";
+import { IReader } from "./reader.interface";
+import { IWriter } from "./writer.interface";
 
 export interface ILogParser {
-  logReader(lineLog: string, level: string): OutputLog;
-  batchLog(logs: Array<string>): Array<OutputLog>;
+  singleLog(lineLog: string, level: string): OutputLog;
+  parse(reader: IReader, writer: IWriter): void;
+  logWriter(writer: IWriter, logs: Array<OutputLog>): void;
 }

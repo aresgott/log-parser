@@ -15,7 +15,12 @@
   "author": "Mohsen Ahmadinia",
   "license": "ISC",
   "devDependencies": {
+    "@babel/core": "^7.16.12",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-typescript": "^7.16.7",
+    "@types/jest": "^27.4.0",
     "@types/node": "^17.0.12",
+    "jest": "^27.4.7",
     "nodemon": "^2.0.15",
     "tslint": "^6.1.3"
   },

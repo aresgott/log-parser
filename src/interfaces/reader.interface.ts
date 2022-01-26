@@ -1,3 +1,3 @@
 export interface IReader{
-    reader(line:string):Array<string>;
+    reader():Array<string>;
 }
