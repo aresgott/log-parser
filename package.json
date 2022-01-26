@@ -1,0 +1,14 @@
+{
+  "name": "log-parser",
+  "version": "1.0.0",
+  "description": "Develop the command line node.js application, which parses the input log file.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [
+    "log"
+  ],
+  "author": "Mohsen Ahmadinia",
+  "license": "ISC"
+}
