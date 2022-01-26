@@ -15,6 +15,7 @@
   "author": "Mohsen Ahmadinia",
   "license": "ISC",
   "devDependencies": {
+    "@types/node": "^17.0.12",
     "nodemon": "^2.0.15",
     "tslint": "^6.1.3"
   }
