@@ -12,21 +12,25 @@ export class LogParser implements ILogParser {
   lexicalParser: LexicalParser;
 
   singleLog(input: string): OutputLog {
-    return this.lexicalParser.parser(input);
+    return this.lexicalParser.parse(input);
   }
 
   parse(reader: IReader, writer: IWriter): void {
-    const allLogs: Array<OutputLog> = [];
     const input = reader.reader();
 
-    input.forEach((item) => {
-      const log: OutputLog = this.singleLog(item);
-      if (Object.keys(log).length > 0) allLogs.push(log);
-    });
+    const allLogs = this.batchLog(input);
 
     this.logWriter(writer, allLogs);
   }
 
+  batchLog(input: Array<string>): Array<OutputLog> {
+    const allLogs: Array<OutputLog> = [];
+    input.forEach((item) => {
+      const log: OutputLog = this.singleLog(item);
+      if (Object.keys(log).length > 0) allLogs.push(log);
+    });
+    return allLogs;
+  }
   logWriter(writer: IWriter, logs: Array<OutputLog>): void {
     writer.writer(logs);
   }
