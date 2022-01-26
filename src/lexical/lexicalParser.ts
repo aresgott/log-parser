@@ -33,8 +33,26 @@ export class LexicalParser {
     }
   }
 
-  checkLogLevel(logLevel: string) {
-    if (logLevel == LogLevel.LEVEL_ERROR) {
+  checkLogLevel(logLevel: string):boolean {
+    let logLvl: string;
+    switch (process.env.LOG_LEVEL) {
+      case "error":
+        logLvl = LogLevel.LEVEL_ERROR;
+        break;
+      case "info":
+        logLvl = LogLevel.LEVEL_INFO;
+        break;
+      case "warng":
+        logLvl = LogLevel.LEVEL_WARN;
+        break;
+      case "debug":
+        logLvl = LogLevel.LEVEL_DEBUG;
+        break;
+      default:
+        logLvl = LogLevel.LEVEL_ERROR;
+        break;
+    }
+    if (logLevel == logLvl) {
       return true;
     } else {
       return false;
