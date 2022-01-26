@@ -12,7 +12,7 @@ export class WriterFile implements IWriter {
       if (err) return console.log(yellowColor, err);
       console.log(
         yellowColor,
-        `Write File Done.\nwe found ${outputLog.length} log for ${process.env.LOG_LEVEL} log lvl`
+        `Write File Done.\nwe found ${outputLog.length} log for ${process.env.LOG_LEVEL||'error'} log level`
       );
     });
   }

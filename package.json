@@ -4,8 +4,8 @@
   "description": "Develop the command line node.js application, which parses the input log file.",
   "main": "dist/app.js",
   "scripts": {
-    "start": "tsc && node dist/app.js",
-    "start:dev": "nodemon src/app.ts",
+    "start": "tsc && node dist/parser.js",
+    "start:dev": "nodemon src/parser.ts",
     "lint": "eslint . --ext .ts",
     "test": "jest"
   },
