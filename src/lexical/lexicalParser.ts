@@ -11,7 +11,7 @@ export class LexicalParser {
         try {
           if (this.checkLogLevel(logLevel)) {
             const logOutput: OutputLog = {
-              timestamp: timeOccure,
+              timestamp: Date.parse(timeOccure),
               loglevel: logLevel,
               transactionId: JSON.parse(logDetail).transactionId,
               err: JSON.parse(logDetail).err,
