@@ -2,13 +2,20 @@
   "name": "log-parser",
   "version": "1.0.0",
   "description": "Develop the command line node.js application, which parses the input log file.",
-  "main": "index.js",
+  "main": "dist/app.js",
   "scripts": {
+    "start": "tsc && node dist/app.js",
+    "start:dev": "nodemon src/app.ts",
+    "lint": "eslint . --ext .ts",
     "test": "jest"
   },
   "keywords": [
     "log"
   ],
   "author": "Mohsen Ahmadinia",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.15",
+    "tslint": "^6.1.3"
+  }
 }
