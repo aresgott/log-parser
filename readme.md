@@ -1,6 +1,5 @@
 # Log parser app
 
-Backend - MAYD/Apollon Assessment 
 
 ## Installation
 
